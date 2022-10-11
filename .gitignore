@@ -32,5 +32,7 @@ hs_err_pid*
 .settings
 test-output
 
+target/
+
 src/test/resources/webdrivers/
 allure-results/
