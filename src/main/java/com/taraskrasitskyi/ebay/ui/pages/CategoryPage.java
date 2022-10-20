@@ -20,7 +20,7 @@ public class CategoryPage extends BasePage{
     }
 
     @Step("Get text from last chain navigate link")
-    public String getTextLastChainNavigateLink(){
+    public String getLastChainNavigateLinkText(){
         List<WebElement> navLinkElements = driver.findElements(NAVIGATE_LINK.getPath());
         return navLinkElements.get(navLinkElements.size()-1).getText();
     }
