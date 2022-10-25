@@ -5,11 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
 
 public class TestRunner {
     protected static WebDriver driver;
     private PropertiesProvider properties = new PropertiesProvider();
+    protected SoftAssert softAssert;
 
     @BeforeClass
     public void getDriver() {
@@ -31,13 +34,19 @@ public class TestRunner {
         }
         driver.manage().window().maximize();
         driver.get(properties.getBaseUrl());
+
     }
 
     @AfterClass
-    public void quitDriver(){
-        if(driver != null){
+    public void quitDriver() {
+        if (driver != null) {
             driver.quit();
         }
+    }
+
+    @BeforeMethod
+    public void setUp(){
+        softAssert = new SoftAssert();
     }
 
 }
