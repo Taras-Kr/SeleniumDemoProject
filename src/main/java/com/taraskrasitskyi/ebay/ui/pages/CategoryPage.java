@@ -14,9 +14,14 @@ public class CategoryPage extends BasePage{
         super(driver);
     }
 
+    @Step("Get title banner caption")
+    public String getTitleBannerCaption(){
+        return driver.findElement(TITLE_BANNER_CAPTION.getPath()).getText();
+    }
+
     @Step("Get page caption")
-    public String getCaption(){
-        return driver.findElement(CAPTION.getPath()).getText();
+    public String  getPageCaption(){
+        return driver.findElement(PAGE_CAPTION.getPath()).getText();
     }
 
     @Step("Get text from last chain navigate link")
