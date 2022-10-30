@@ -1,5 +1,6 @@
 package com.taraskrasitskyi.ebay.ui.pages;
 
+import com.taraskrasitskyi.ebay.ui.elements.Header;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -30,5 +31,9 @@ public abstract class BasePage {
         }catch(TimeoutException e){
             return false;
         }
+    }
+
+    public Header getHeader(){
+        return new Header(driver);
     }
 }

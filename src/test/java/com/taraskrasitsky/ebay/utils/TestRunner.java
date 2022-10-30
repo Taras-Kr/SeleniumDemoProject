@@ -19,13 +19,14 @@ public class TestRunner {
 
         switch (properties.getBrowser()) {
             case "chrome": {
-                driver = new ChromeDriver();
                 System.setProperty("webdriver.chrome.driver", properties.getChromeBrowser());
+                driver = new ChromeDriver();
                 break;
             }
             case "firefox": {
-                driver = new FirefoxDriver();
                 System.setProperty("webdriver.gecko.driver", properties.getFireFoxBrowser());
+                driver = new FirefoxDriver();
+
                 break;
             }
             default: {
@@ -45,7 +46,7 @@ public class TestRunner {
     }
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
         softAssert = new SoftAssert();
     }
 

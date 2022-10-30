@@ -15,4 +15,5 @@ public enum BasePageLocators implements BaseLocators {
     public By getPath() {
         return path;
     }
+
 }

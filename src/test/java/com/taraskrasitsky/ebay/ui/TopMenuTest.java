@@ -44,11 +44,7 @@ public class TopMenuTest extends TestRunner {
         for (int i = 1; i <= mostPopularCategoriesCount; i++) {
             categoryPage = topMenu.openMostPopularCategory(TOP_MENU_ELECTRONICS.getPath(), i);
             softAssert.assertEquals(categoryPage.getLastChainNavigateLinkText(), expectedLinkTexts.get(i - 1));
-            if (categoryPage.isElementVisible(TITLE_BANNER_CAPTION.getPath(), 2L)) {
-                softAssert.assertEquals(categoryPage.getTitleBannerCaption(), expectedPageCaptions.get(i - 1));
-            } else {
-                softAssert.assertEquals(categoryPage.getPageCaption(), expectedPageCaptions.get(i - 1));
-            }
+            softAssert.assertEquals(categoryPage.getPageCaption(), expectedPageCaptions.get(i - 1));
             categoryPage.getHomePage();
         }
         softAssert.assertAll();
