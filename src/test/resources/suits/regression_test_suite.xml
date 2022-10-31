@@ -15,6 +15,7 @@
         <classes>
             <class name="com.taraskrasitsky.ebay.ui.ShopByCategoryTest">
                 <methods>
+                    <include name="verifyThatSeeAllCategoriesOpens"/>
                     <include name="verifyThatCategoriesOpen"/>
                 </methods>
             </class>

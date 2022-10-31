@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public enum ShopByCategoriesLocators implements BaseLocators{
     CATEGORIES_LIST(By.xpath("//h3[@class='gh-sbc-parent']/a")),
     CATEGORY_FROM_LIST(By.xpath("(//h3[@class='gh-sbc-parent']/a)[%s]")),
-    CATEGORY_FROM_LIST_(By.cssSelector("(//h3[@class='gh-sbc-parent']/a)[%s]"));
+    SEE_ALL_CATEGORIES(By.xpath("//a[@id='gh-shop-see-all']"));
 
     By path;
 
