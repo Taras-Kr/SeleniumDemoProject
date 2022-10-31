@@ -8,9 +8,12 @@ import com.taraskrasitskyi.ebay.ui.pages.HomePage;
 import io.qameta.allure.Description;
 import io.qameta.allure.TmsLink;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+
+import static com.taraskrasitskyi.ebay.ui.locators.ShopByCategoriesLocators.SEE_ALL_CATEGORIES;
 
 public class ShopByCategoryTest extends TestRunner {
 
@@ -38,6 +41,19 @@ public class ShopByCategoryTest extends TestRunner {
             softAssert.assertEquals(categoryPage.getPageCaption(), expectedPageHeaders.get(i));
             homePage = categoryPage.getHomePage();
         }
+        softAssert.assertAll();
+    }
+
+    @Test(description = "Verify that the user can open the \"See All Categories\" link from the ShopByCategory menu")
+    @Description("Verify that the user can open the \"See All Categories\" link from the ShopByCategory menu")
+    @TmsLink(value = "SEL-4")
+    public void verifyThatSeeAllCategoriesOpens() {
+        CategoryPage seeAllCategories = new HomePage(driver)
+                .getHeader()
+                .openShopByCategoryMenu()
+                .openCategory(driver.findElement(SEE_ALL_CATEGORIES.getPath()));
+        softAssert.assertEquals(seeAllCategories.getPageCaption(), "All Categories");
+        seeAllCategories.getHomePage();
         softAssert.assertAll();
     }
 }

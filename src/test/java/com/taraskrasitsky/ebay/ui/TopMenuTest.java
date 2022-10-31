@@ -8,10 +8,8 @@ import com.taraskrasitskyi.ebay.ui.pages.HomePage;
 import io.qameta.allure.Description;
 import io.qameta.allure.TmsLink;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
-import static com.taraskrasitskyi.ebay.ui.locators.CategoryPageLocators.*;
 import static com.taraskrasitskyi.ebay.ui.locators.TopMenuLocators.*;
 
 public class TopMenuTest extends TestRunner {
