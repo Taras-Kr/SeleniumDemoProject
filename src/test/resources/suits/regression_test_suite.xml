@@ -17,6 +17,7 @@
                 <methods>
                     <include name="verifyThatSeeAllCategoriesOpens"/>
                     <include name="verifyThatCategoriesOpen"/>
+                    <include name="verifySubCategoriesCount"/>
                 </methods>
             </class>
         </classes>
