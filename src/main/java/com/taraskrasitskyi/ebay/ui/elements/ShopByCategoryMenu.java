@@ -5,7 +5,11 @@ import com.taraskrasitskyi.ebay.ui.pages.CategoryPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 import static com.taraskrasitskyi.ebay.ui.locators.ShopByCategoriesLocators.*;

@@ -12,6 +12,9 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <aspectj.version>1.9.5</aspectj.version>
+        <suiteXmlPath>src/test/resources/suites/</suiteXmlPath>
+        <defaultSuiteXml>regression_test_suite.xml</defaultSuiteXml>
+        <suiteXml>${defaultSuiteXml}</suiteXml>
     </properties>
 
     <dependencies>
@@ -59,6 +62,9 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlPath}${suiteXml}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
