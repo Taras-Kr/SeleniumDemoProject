@@ -8,15 +8,13 @@ import static com.taraskrasitskyi.ebay.ui.locators.HeaderLocators.SHOP_BY_CATEGO
 
 public class Header extends BasePage {
 
-    public Header(WebDriver driver){
+    public Header(WebDriver driver) {
         super(driver);
     }
 
     @Step("Open Shop By Category Menu")
-    public ShopByCategoryMenu openShopByCategoryMenu(){
-        driver.findElement( SHOP_BY_CATEGORY_MENU.getPath()).click();
+    public ShopByCategoryMenu openShopByCategoryMenu() {
+        driver.findElement(SHOP_BY_CATEGORY_MENU.getPath()).click();
         return new ShopByCategoryMenu(driver);
     }
-
-
 }
