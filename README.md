@@ -63,6 +63,6 @@ In the IDEA terminal type:
 
 ``` allure serve allure-reports```
 
-Note: This project will be migrated to the Selenide framework. eBay Automation testing using Selenide HERE.
+Note: This project migrated to Selenide framework. eBay Automation testing using Selenide [HERE](https://github.com/Taras-Kr/eBayAutomation.git).
 
 
